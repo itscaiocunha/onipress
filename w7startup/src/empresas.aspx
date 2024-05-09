@@ -54,7 +54,7 @@
         <div class="col-sm-12 col-md-7 col-lg-9 col-xxl-10 text-end mb-1">
             <div class="d-inline-block">
                 <!-- Print Button Start -->
-                <asp:LinkButton ID="btnImprimir" runat="server" CssClass="btn btn-icon btn-icon-only btn-foreground-alternate shadow"><i data-acorn-icon="print"></i></asp:LinkButton>
+<%--                <asp:LinkButton ID="btnImprimir" runat="server" CssClass="btn btn-icon btn-icon-only btn-foreground-alternate shadow"><i data-acorn-icon="print"></i></asp:LinkButton>
                 <!-- Print Button End -->
 
                 <!-- Export Dropdown Start -->
@@ -75,10 +75,10 @@
                         <asp:LinkButton ID="btnDownloadCSV" runat="server" CssClass="dropdown-item export-cvs">Csv</asp:LinkButton>
                     </div>
 
-                </div>
+                </div>--%>
                 <!-- Export Dropdown End -->
 
-                <!-- Length Start -->
+<%--                <!-- Length Start -->
                 <div class="dropdown-as-select d-inline-block" data-childselector="span">
                     <button class="btn p-0 shadow" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,3">
                         <span
@@ -99,7 +99,7 @@
             </div>
         </div>
     </div>
-    <!-- Controls End -->
+    <!-- Controls End -->--%>
     <!-- Discount List Start -->
 
     <asp:GridView ID="gdvDados" runat="server">

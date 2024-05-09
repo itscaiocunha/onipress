@@ -119,6 +119,8 @@
   <ItemGroup>
     <Content Include="src\admin\dashboard_admin.aspx" />
     <Content Include="src\blocos.aspx" />
+    <Content Include="src\tipoocorrencia.aspx" />
+    <Content Include="src\tipopessoas.aspx" />
     <Content Include="src\ocorrencias.aspx" />
     <Content Include="src\planos.aspx" />
     <Content Include="src\dispositivos.aspx" />
@@ -548,6 +550,20 @@
     </Compile>
     <Compile Include="src\blocos.aspx.designer.cs">
       <DependentUpon>blocos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\tipoocorrencia.aspx.cs">
+      <DependentUpon>tipoocorrencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\tipoocorrencia.aspx.designer.cs">
+      <DependentUpon>tipoocorrencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\tipopessoas.aspx.cs">
+      <DependentUpon>tipopessoas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\tipopessoas.aspx.designer.cs">
+      <DependentUpon>tipopessoas.aspx</DependentUpon>
     </Compile>
     <Compile Include="src\ocorrencias.aspx.cs">
       <DependentUpon>ocorrencias.aspx</DependentUpon>

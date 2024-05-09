@@ -270,7 +270,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="tipo_pessoa.aspx">
+                                <a href="tipopessoas.aspx">
                                     <i data-acorn-icon="user" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Tipo de Pessoa</span>
                                 </a>
@@ -288,7 +288,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="tipo_ocorrencia.aspx">
+                                <a href="tipoocorrencia.aspx">
                                     <i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Tipo de Ocorrência</span>
                                 </a>

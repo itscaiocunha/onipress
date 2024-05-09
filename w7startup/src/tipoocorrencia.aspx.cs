@@ -16,16 +16,17 @@ using System.Runtime.InteropServices;
 
 namespace global
 {
-    public partial class login1 : System.Web.UI.Page
+    public partial class tipopessoas : System.Web.UI.Page
     {
         public static void Page_Load(object sender, EventArgs e)
         {
             
         }
 
-        protected void btnEntrar_Click(object sender, EventArgs e)
+        protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("dashboard.aspx", true);
+
         }
-    }
+
+   }
 }

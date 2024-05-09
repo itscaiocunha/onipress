@@ -53,7 +53,7 @@
 
         <div class="col-sm-12 col-md-7 col-lg-9 col-xxl-10 text-end mb-1">
             <div class="d-inline-block">
-                <!-- Print Button Start -->
+                <%--<!-- Print Button Start -->
                 <asp:LinkButton ID="btnImprimir" runat="server" CssClass="btn btn-icon btn-icon-only btn-foreground-alternate shadow"><i data-acorn-icon="print"></i></asp:LinkButton>
                 <!-- Print Button End -->
 
@@ -75,8 +75,8 @@
                         <asp:LinkButton ID="btnDownloadCSV" runat="server" CssClass="dropdown-item export-cvs">Csv</asp:LinkButton>
                     </div>
 
-                </div>
-                <!-- Export Dropdown End -->
+                </div>--%>
+                <%--<!-- Export Dropdown End -->
 
                 <!-- Length Start -->
                 <div class="dropdown-as-select d-inline-block" data-childselector="span">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <!-- Length End -->
-            </div>
+            </div>--%>
         </div>
     </div>
     <!-- Controls End -->
@@ -189,11 +189,19 @@
                     <h5 class="modal-title">Adicionar Pessoas</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <!-- Cadastro -->
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Nome completo</label>
                         <asp:TextBox ID="txtNomeCliente" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>                    
+                    </div>       
+                    <div class="mb-3 w-100">
+                        <label class="form-label">Tipo de Acesso</label>
+                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control shadow dropdown-menu-end">
+                            <asp:ListItem Text="Morador" CssClass="dropdown-item"></asp:ListItem>
+                            <asp:ListItem Text="Visitante" CssClass="dropdown-item"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
                     <div class="mb-3">
                         <label class="form-label">CPF</label>
                         <asp:TextBox ID="txtCPFCNPJ" runat="server" CssClass="form-control"></asp:TextBox>
@@ -206,69 +214,23 @@
                         <label class="form-label">E-mail</label>
                         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">CEP</label>
-                        <asp:TextBox ID="txtCEP" runat="server" CssClass="form-control" OnTextChanged="txtCEP_TextChanged"></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Endereço</label>
-                        <asp:TextBox ID="txtEndereco" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Num</label>
-                        <asp:TextBox ID="txtNum" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Bairro</label>
-                        <asp:TextBox ID="txtBairro" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Complemento</label>
-                        <asp:TextBox ID="txtComplemento" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Estado</label>
-                        <asp:DropDownList runat="server" ID="ddlUF" CssClass="form-control">
-    <asp:ListItem Text="Acre - AC" Value="AC" />
-    <asp:ListItem Text="Alagoas - AL" Value="AL" />
-    <asp:ListItem Text="Amapá - AP" Value="AP" />
-    <asp:ListItem Text="Amazonas - AM" Value="AM" />
-    <asp:ListItem Text="Bahia - BA" Value="BA" />
-    <asp:ListItem Text="Ceará - CE" Value="CE" />
-    <asp:ListItem Text="Espiríto Santo - ES" Value="ES" />
-    <asp:ListItem Text="Goiás - GO" Value="GO" />
-    <asp:ListItem Text="Maranhão - MA" Value="MA" />
-    <asp:ListItem Text="Mato Grosso - MT" Value="MT" />
-    <asp:ListItem Text="Mato Grosso do Sul - MS" Value="MS" />
-    <asp:ListItem Text="Minas Gerais - MG" Value="MG" />
-    <asp:ListItem Text="Pará - PA" Value="PA" />
-    <asp:ListItem Text="Paraíba - PB" Value="PB" />
-    <asp:ListItem Text="Paraná - PR" Value="PR" />
-    <asp:ListItem Text="Pernambuco - PE" Value="PE" />
-    <asp:ListItem Text="Piauí - PI" Value="PI" />
-    <asp:ListItem Text="Rio de Janeiro - RJ" Value="RJ" />
-    <asp:ListItem Text="Rio Grande do Norte - RN" Value="RN" />
-    <asp:ListItem Text="Rio Grande do Sul - RS" Value="RS" />
-    <asp:ListItem Text="Rondônia - RO" Value="RO" />
-    <asp:ListItem Text="Roraima - RR" Value="RR" />
-    <asp:ListItem Text="Santa Catarina - SC" Value="SC" />
-    <asp:ListItem Text="São Paulo - SP" Value="SP" />
-    <asp:ListItem Text="Sergipe - SE" Value="SE" />
-    <asp:ListItem Text="Tocantins - TO" Value="TO" />
-    <asp:ListItem Text="Distrito Federal - DF" Value="DF" />
-</asp:DropDownList>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Cidade</label>
-                        <asp:TextBox ID="txtCidade" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
 
-                    <div class="mb-3 w-100">
-                        <label class="form-label">Tipo de Acesso</label>
-                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control shadow dropdown-menu-end">
-                            <asp:ListItem Text="Morador" CssClass="dropdown-item"></asp:ListItem>
-                            <asp:ListItem Text="Visitante" CssClass="dropdown-item"></asp:ListItem>
-                        </asp:DropDownList>
+                    <!-- Local -->
+                    <div class="mb-3">
+                        <label class="form-label">Condomínio/Empresa</label>
+                        <asp:TextBox ID="txtCondominioEmpresa" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Unidade</label>
+                        <asp:TextBox ID="txtUnidade" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Bloco</label>
+                        <asp:TextBox ID="txtBloco" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Dispositivo</label>
+                        <asp:TextBox ID="txtDispositivo" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
 
                     <div class="mb-3 w-100">
@@ -281,10 +243,10 @@
                 </div>
                 <div class="modal-footer border-0">                    
                     <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click"> <span>Adicionar</span>
- <i data-acorn-icon="send"></i></asp:LinkButton>
+                        <i data-acorn-icon="send"></i>
+                    </asp:LinkButton>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Discount Add Modal End -->
 </asp:Content>
