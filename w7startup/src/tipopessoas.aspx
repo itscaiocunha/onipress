@@ -73,7 +73,11 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Nome</label>
-                        <asp:TextBox ID="txtNome" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtNome" runat="server" CssClass="form-control" Required></asp:TextBox>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Descrição</label>
+                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Required></asp:TextBox>
                     </div>
                     <div class="mb-3 w-100">
                         <label class="form-label">Status</label>

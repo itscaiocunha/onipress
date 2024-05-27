@@ -54,7 +54,7 @@
         <div class="col-sm-12 col-md-7 col-lg-9 col-xxl-10 text-end mb-1">
             <div class="d-inline-block">
                 <!-- Print Button Start -->
-                <asp:LinkButton ID="btnImprimir" runat="server" CssClass="btn btn-icon btn-icon-only btn-foreground-alternate shadow"><i data-acorn-icon="print"></i></asp:LinkButton>
+                <%--<asp:LinkButton ID="btnImprimir" runat="server" CssClass="btn btn-icon btn-icon-only btn-foreground-alternate shadow"><i data-acorn-icon="print"></i></asp:LinkButton>
                 <!-- Print Button End -->
 
                 <!-- Export Dropdown Start -->
@@ -94,7 +94,7 @@
                         <asp:LinkButton ID="btnView20" runat="server" CssClass="dropdown-item active">20 Itens</asp:LinkButton>
                         <asp:LinkButton ID="btnView50" runat="server" CssClass="dropdown-item">50 Itens</asp:LinkButton>
                     </div>
-                </div>
+                </div>--%>
                 <!-- Length End -->
             </div>
         </div>
