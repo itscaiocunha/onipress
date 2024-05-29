@@ -19,6 +19,7 @@ using URL_Shortener;
 using Newtonsoft.Json;
 using System.Runtime.ConstrainedExecution;
 using gerentefacil;
+using System.Data.Common;
 
 namespace global
 {
@@ -29,7 +30,47 @@ namespace global
             
         }
 
-        protected async void btnSalvar_Click(object sender, EventArgs e)
+        protected void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Database db = DatabaseFactory.CreateDatabase("ConnectionString");
+
+            DbCommand command = db.GetSqlStringCommand(
+                "INSERT INTO OniPres_pessoa (nome, tipo_pessoa, cpf, celular, email, empresa, unidade, bloco, dispositivo, [status]) " +
+                "VALUES (@nome, @tipo, @cpf, @celular, @email, @empresa, @unidade, @bloco, @dispositivo, @status)");
+
+            db.AddInParameter(command, "@nome", DbType.String, txtNomeCliente.Text);
+            db.AddInParameter(command, "@tipo", DbType.String, txtTipo.Text);
+            db.AddInParameter(command, "@cpf", DbType.String, txtCPFCNPJ.Text);
+            db.AddInParameter(command, "@celular", DbType.String, txtCelular.Text);
+            db.AddInParameter(command, "@email", DbType.String, txtEmail.Text);
+            db.AddInParameter(command, "@empresa", DbType.String, txtCondominioEmpresa.Text);
+            db.AddInParameter(command, "@unidade", DbType.String, txtUnidade.Text);
+            db.AddInParameter(command, "@bloco", DbType.String, txtBloco.Text);
+            db.AddInParameter(command, "@dispositivo", DbType.String, txtDispositivo.Text);
+            db.AddInParameter(command, "@status", DbType.String, ddlStatus.SelectedValue);
+
+            try
+            {
+                db.ExecuteNonQuery(command);
+
+                lblMensagem.Text = "Adicionado com sucesso!";
+
+                string mensagem = "Morador";
+
+                if (txtTipo.Text == mensagem)
+                {
+                    enviarMensagemMorador();
+                }
+
+                LimparCampos();
+            }
+            catch (Exception ex)
+            {
+                lblMensagem.Text = "Erro ao adicionar: " + ex.Message;
+            }
+        }
+
+        protected async void enviarMensagemMorador ()
         {
             Whatsapp dados = new Whatsapp();
             dados.senha = "Sqlw7@23w7";
@@ -40,9 +81,23 @@ namespace global
 
             dados.numero = "55" + txtCelular.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
             dados.clientId = "2b08Cl7ia6RxsNK2wqDdA2ov0LbSKOn4uat2I2qbYJd0jC4JjVlOFe";
-            dados.mensagem = "Olá "+ txtNomeCliente.Text +" seu cadastro foi realizado com sucesso. Visualizar o qrcode de acesso: "+ url+". Obrigado.";
+            dados.mensagem = "Olá " + txtNomeCliente.Text + " seu cadastro foi realizado com sucesso. Visualizar o qrcode de acesso: " + url + ". Obrigado.";
 
             await Zapweb.EnviarMensagem(dados);
+        }
+
+        private void LimparCampos()
+        {
+            txtNomeCliente.Text = string.Empty;
+            txtTipo.Text = string.Empty;
+            txtCPFCNPJ.Text = string.Empty;
+            txtCelular.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtCondominioEmpresa.Text = string.Empty;
+            txtUnidade.Text = string.Empty;
+            txtBloco.Text = string.Empty;
+            txtDispositivo.Text = string.Empty;
+            ddlStatus.SelectedIndex = 0;
         }
     }
 }

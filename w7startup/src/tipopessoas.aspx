@@ -50,17 +50,32 @@
         </div>
 
         <!-- Discount List Start -->
-        <div class="col-sm-12 col-md-7 col-lg-9 col-xxl-10 text-end mb-1">
-            <div class="d-inline-block"></div>
-        </div>
-        <asp:GridView ID="gdvDados" runat="server">
-            <HeaderStyle CssClass="text-muted text-small d-lg-none" />
-            <RowStyle CssClass="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative" />
-            <Columns>
-           
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="sdsDados" runat="server"></asp:SqlDataSource>
+<%--        <div class="row">
+                <div class="col-12 mb-5">
+                   <asp:GridView ID="gdvDados" runat="server" Width="100%" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" EmptyDataText="Não há dados para visualizar" DataSourceID="sdsDados" OnRowCommand="gdvDados_RowCommand">
+                        <Columns>
+                             <asp:TemplateField>
+                                 <ItemTemplate>
+                                     <asp:Button data-bs-offset="0,3" data-bs-toggle="modal" data-bs-target="#discountAddModal" ID="btnEditar" CssClass="btn btn-icon btn-icon-end btn-primary" CommandArgument='<%# Eval("id") %>' CommandName="Editar" runat="server" Text="Editar" /></ItemTemplate>
+                             </asp:TemplateField>
+                            <asp:BoundField DataField="id" HeaderText="Cód" SortExpression="id" />
+                            <asp:BoundField DataField="nome" HeaderText="Tipo" SortExpression="nome" />
+                            <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />
+                        </Columns>
+                    </asp:GridView>
+                    <EditRowStyle BackColor="#7C6F57" />
+                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle />
+                    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle Height="4em" BackColor="White" ForeColor="#a59e9e" CssClass="fix-margin" />
+                    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                    <SortedAscendingHeaderStyle BackColor="#246B61" />
+                    <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                    <SortedDescendingHeaderStyle BackColor="#15524A" />
+                    <asp:SqlDataSource ID="sdsDados" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="select * from OniPres_tipoPessoa where status = 'Ativo'"></asp:SqlDataSource>
+                </div>
+        </div>--%>
 
     <!-- Discount Add Modal Start -->
     <div class="modal modal-right fade" id="discountAddModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -73,24 +88,24 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Nome</label>
-                        <asp:TextBox ID="txtNome" runat="server" CssClass="form-control" Required></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Descrição</label>
-                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Required></asp:TextBox>
+                        <asp:TextBox ID="txtNomeCliente" runat="server" CssClass="form-control" Required></asp:TextBox>
                     </div>
                     <div class="mb-3 w-100">
                         <label class="form-label">Status</label>
-                        <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-control shadow dropdown-menu-end">
+                        <asp:DropDownList ID="ddlStatu" runat="server" CssClass="form-control shadow dropdown-menu-end">
                             <asp:ListItem Text="Ativo" CssClass="dropdown-item"></asp:ListItem>
                             <asp:ListItem Text="Inativo" CssClass="dropdown-item"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </div>
                 <div class="modal-footer border-0">
-                    <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click"><span>Adicionar</span>
+                    <asp:Label ID="lblMensagem" runat="server" Text=""></asp:Label>
+                    <br />
+                    <%--<asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click"><span>Adicionar</span>
                         <i data-acorn-icon="send"></i>
-                    </asp:LinkButton>
+                    </asp:LinkButton>--%>
+
+                    <asp:Button ID="btnSalve" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click" Text="Adicionar" />
                 </div>
             </div>
         </div>

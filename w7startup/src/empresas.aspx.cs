@@ -36,7 +36,7 @@ namespace global
 
                 db.AddInParameter(command, "@nome", DbType.String, txtNomeCliente.Text);
                 db.AddInParameter(command, "@razao", DbType.String, txtRazaoSocial.Text);
-                db.AddInParameter(command, "@cpf", DbType.String, txtCPFCNPJ.Text);
+                db.AddInParameter(command, "@cpf", DbType.String, txtCPFCNPJ.Text);  
                 db.AddInParameter(command, "@celular", DbType.String, txtCelular.Text);
                 db.AddInParameter(command, "@email", DbType.String, txtEmail.Text);
                 db.AddInParameter(command, "@cep", DbType.String, txtCEP.Text);
@@ -51,14 +51,12 @@ namespace global
                 db.ExecuteNonQuery(command);
 
                 lblMensagem.Text = "Adicionado com sucesso!";
-                lblMensagem.CssClass = "text-success";
 
                 LimparCampos();
             }
             catch (Exception ex)
             {
                 lblMensagem.Text = "Erro ao adicionar: " + ex.Message;
-                lblMensagem.CssClass = "text-danger";
             }
         }
 

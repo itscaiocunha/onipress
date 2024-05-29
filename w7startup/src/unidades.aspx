@@ -191,24 +191,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label class="form-label">Nome fantasia</label>
+                        <label class="form-label">Nome</label>
                         <asp:TextBox ID="txtNomeCliente" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Razão Social</label>
-                        <asp:TextBox ID="txtRazaoSocial" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">CPF/CNPJ</label>
-                        <asp:TextBox ID="txtCPFCNPJ" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Celular</label>
-                        <asp:TextBox ID="txtCelular" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">E-mail</label>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                        <label class="form-label">Empresa</label>
+                        <asp:TextBox ID="txtEmpresa" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">CEP</label>
@@ -232,7 +220,35 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Estado</label>
-
+                        <asp:DropDownList runat="server" ID="ddlUF" CssClass="form-control">
+                            <asp:ListItem Text="Acre - AC" Value="AC" />
+                            <asp:ListItem Text="Alagoas - AL" Value="AL" />
+                            <asp:ListItem Text="Amapá - AP" Value="AP" />
+                            <asp:ListItem Text="Amazonas - AM" Value="AM" />
+                            <asp:ListItem Text="Bahia - BA" Value="BA" />
+                            <asp:ListItem Text="Ceará - CE" Value="CE" />
+                            <asp:ListItem Text="Espiríto Santo - ES" Value="ES" />
+                            <asp:ListItem Text="Goiás - GO" Value="GO" />
+                            <asp:ListItem Text="Maranhão - MA" Value="MA" />
+                            <asp:ListItem Text="Mato Grosso - MT" Value="MT" />
+                            <asp:ListItem Text="Mato Grosso do Sul - MS" Value="MS" />
+                            <asp:ListItem Text="Minas Gerais - MG" Value="MG" />
+                            <asp:ListItem Text="Pará - PA" Value="PA" />
+                            <asp:ListItem Text="Paraíba - PB" Value="PB" />
+                            <asp:ListItem Text="Paraná - PR" Value="PR" />
+                            <asp:ListItem Text="Pernambuco - PE" Value="PE" />
+                            <asp:ListItem Text="Piauí - PI" Value="PI" />
+                            <asp:ListItem Text="Rio de Janeiro - RJ" Value="RJ" />
+                            <asp:ListItem Text="Rio Grande do Norte - RN" Value="RN" />
+                            <asp:ListItem Text="Rio Grande do Sul - RS" Value="RS" />
+                            <asp:ListItem Text="Rondônia - RO" Value="RO" />
+                            <asp:ListItem Text="Roraima - RR" Value="RR" />
+                            <asp:ListItem Text="Santa Catarina - SC" Value="SC" />
+                            <asp:ListItem Text="São Paulo - SP" Value="SP" />
+                            <asp:ListItem Text="Sergipe - SE" Value="SE" />
+                            <asp:ListItem Text="Tocantins - TO" Value="TO" />
+                            <asp:ListItem Text="Distrito Federal - DF" Value="DF" />
+                        </asp:DropDownList>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Cidade</label>
@@ -248,8 +264,12 @@
                     </div>
                 </div>
                 <div class="modal-footer border-0">
-                    <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server"> <span>Adicionar</span>
- <i data-acorn-icon="send"></i></asp:LinkButton>
+                    <asp:Label ID="lblMensagem" runat="server" Text=""></asp:Label>
+                    <br />
+                    <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server"> 
+                        <span>Adicionar</span>
+                        <i data-acorn-icon="send"></i>
+                    </asp:LinkButton>        
                 </div>
             </div>
         </div>

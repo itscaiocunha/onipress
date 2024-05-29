@@ -126,12 +126,9 @@
                         <label class="form-label">Nome completo</label>
                         <asp:TextBox ID="txtNomeCliente" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>       
-                    <div class="mb-3 w-100">
+                    <div class="mb-3">
                         <label class="form-label">Tipo de Acesso</label>
-                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control shadow dropdown-menu-end">
-                            <asp:ListItem Text="Morador" CssClass="dropdown-item"></asp:ListItem>
-                            <asp:ListItem Text="Visitante" CssClass="dropdown-item"></asp:ListItem>
-                        </asp:DropDownList>
+                        <asp:TextBox ID="txtTipo" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">CPF</label>
@@ -172,7 +169,9 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-                <div class="modal-footer border-0">                    
+                <div class="modal-footer border-0">  
+                    <asp:Label ID="lblMensagem" runat="server" Text=""></asp:Label>
+                    <br />
                     <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click"> <span>Adicionar</span>
                         <i data-acorn-icon="send"></i>
                     </asp:LinkButton>
