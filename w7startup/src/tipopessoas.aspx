@@ -1,4 +1,4 @@
-﻿<%@ Page Async="true" Title="" Language="C#" MasterPageFile="~/src/principal.Master" AutoEventWireup="true" CodeBehind="tipopessoas.aspx.cs" Inherits="global.tipopessoas" %>
+﻿<%--<%@ Page Async="true" Title="" Language="C#" MasterPageFile="~/src/principal.Master" AutoEventWireup="true" CodeBehind="tipopessoas.aspx.cs" Inherits="global.tipopessoas" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Title and Top Buttons Start -->
@@ -75,7 +75,7 @@
                     <SortedDescendingHeaderStyle BackColor="#15524A" />
                     <asp:SqlDataSource ID="sdsDados" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="select * from OniPres_tipoPessoa where status = 'Ativo'"></asp:SqlDataSource>
                 </div>
-        </div>--%>
+        </div>
 
     <!-- Discount Add Modal Start -->
     <div class="modal modal-right fade" id="discountAddModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -101,13 +101,11 @@
                 <div class="modal-footer border-0">
                     <asp:Label ID="lblMensagem" runat="server" Text=""></asp:Label>
                     <br />
-                    <%--<asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click"><span>Adicionar</span>
+                    <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click"><span>Adicionar</span>
                         <i data-acorn-icon="send"></i>
-                    </asp:LinkButton>--%>
-
-                    <asp:Button ID="btnSalve" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click" Text="Adicionar" />
+                    </asp:LinkButton>
                 </div>
             </div>
         </div>
     </div>
-</asp:Content>
+</asp:Content>--%>

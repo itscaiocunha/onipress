@@ -1,62 +1,62 @@
-﻿//------------------------------------------------------------------------------
-// <gerado automaticamente>
-//     Esse código foi gerado por uma ferramenta.
-//
-//     As alterações ao arquivo poderão causar comportamento incorreto e serão perdidas se
-//     o código for recriado
-// </gerado automaticamente>
-//------------------------------------------------------------------------------
+﻿////------------------------------------------------------------------------------
+//// <gerado automaticamente>
+////     Esse código foi gerado por uma ferramenta.
+////
+////     As alterações ao arquivo poderão causar comportamento incorreto e serão perdidas se
+////     o código for recriado
+//// </gerado automaticamente>
+////------------------------------------------------------------------------------
 
-namespace global
-{
+//namespace global
+//{
 
 
-    public partial class tipopessoas
-    {
+//    public partial class tipopessoas
+//    {
 
-        /// <summary>
-        /// Controle txtBuscar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscar;
+//        /// <summary>
+//        /// Controle txtBuscar.
+//        /// </summary>
+//        /// <remarks>
+//        /// Campo gerado automaticamente.
+//        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+//        /// </remarks>
+//        protected global::System.Web.UI.WebControls.TextBox txtBuscar;
 
-        /// <summary>
-        /// Controle txtNomeCliente.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeCliente;
+//        /// <summary>
+//        /// Controle txtNomeCliente.
+//        /// </summary>
+//        /// <remarks>
+//        /// Campo gerado automaticamente.
+//        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+//        /// </remarks>
+//        protected global::System.Web.UI.WebControls.TextBox txtNomeCliente;
 
-        /// <summary>
-        /// Controle ddlStatu.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStatu;
+//        /// <summary>
+//        /// Controle ddlStatu.
+//        /// </summary>
+//        /// <remarks>
+//        /// Campo gerado automaticamente.
+//        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+//        /// </remarks>
+//        protected global::System.Web.UI.WebControls.DropDownList ddlStatu;
 
-        /// <summary>
-        /// Controle lblMensagem.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensagem;
+//        /// <summary>
+//        /// Controle lblMensagem.
+//        /// </summary>
+//        /// <remarks>
+//        /// Campo gerado automaticamente.
+//        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+//        /// </remarks>
+//        protected global::System.Web.UI.WebControls.Label lblMensagem;
 
-        /// <summary>
-        /// Controle btnSalve.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSalve;
-    }
-}
+//        /// <summary>
+//        /// Controle btnSalvar.
+//        /// </summary>
+//        /// <remarks>
+//        /// Campo gerado automaticamente.
+//        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+//        /// </remarks>
+//        protected global::System.Web.UI.WebControls.LinkButton btnSalvar;
+//    }
+//}

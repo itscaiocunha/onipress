@@ -97,7 +97,7 @@
                 <div class="modal-footer border-0">
                     <asp:Label ID="lblMensagem" runat="server" Text=""></asp:Label>
                     <br />
-                    <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server">
+                    <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click">
                         <span>Adicionar</span>
                         <i data-acorn-icon="send"></i>
                     </asp:LinkButton>

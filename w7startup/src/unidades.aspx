@@ -49,58 +49,7 @@
                 </span>
             </div>
         </div>
-        <!-- Search End -->
-
-        <div class="col-sm-12 col-md-7 col-lg-9 col-xxl-10 text-end mb-1">
-            <div class="d-inline-block">
-                <!-- Print Button Start -->
-                <%--<asp:LinkButton ID="btnImprimir" runat="server" CssClass="btn btn-icon btn-icon-only btn-foreground-alternate shadow"><i data-acorn-icon="print"></i></asp:LinkButton>
-                <!-- Print Button End -->
-
-                <!-- Export Dropdown Start -->
-                <div class="d-inline-block">
-                    <button class="btn p-0" data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                        <span
-                            class="btn btn-icon btn-icon-only btn-foreground-alternate shadow dropdown"
-                            data-bs-delay="0"
-                            data-bs-placement="top"
-                            data-bs-toggle="tooltip"
-                            title="Export">
-                            <i data-acorn-icon="download"></i>
-                        </span>
-                    </button>
-                    <div class="dropdown-menu shadow dropdown-menu-end">
-                        <asp:LinkButton ID="btnDownloadExcel" runat="server" CssClass="dropdown-item export-excel">Excel</asp:LinkButton>
-                        <asp:LinkButton ID="btnDownloadPDf" runat="server" CssClass="dropdown-item export-pdf">Pdf</asp:LinkButton>
-                        <asp:LinkButton ID="btnDownloadCSV" runat="server" CssClass="dropdown-item export-cvs">Csv</asp:LinkButton>
-                    </div>
-
-                </div>
-                <!-- Export Dropdown End -->
-
-                <!-- Length Start -->
-                <div class="dropdown-as-select d-inline-block" data-childselector="span">
-                    <button class="btn p-0 shadow" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,3">
-                        <span
-                            class="btn btn-foreground-alternate dropdown-toggle"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            data-bs-delay="0"
-                            title="Item Count">10 Items
-    </span>
-                    </button>
-                    <div class="dropdown-menu shadow dropdown-menu-end">
-                        <asp:LinkButton ID="btnView5" runat="server" CssClass="dropdown-item">5 Itens</asp:LinkButton>
-                        <asp:LinkButton ID="btnView20" runat="server" CssClass="dropdown-item active">20 Itens</asp:LinkButton>
-                        <asp:LinkButton ID="btnView50" runat="server" CssClass="dropdown-item">50 Itens</asp:LinkButton>
-                    </div>
-                </div>--%>
-                <!-- Length End -->
-            </div>
-        </div>
     </div>
-    <!-- Controls End -->
-    <!-- Discount List Start -->
 
     <asp:GridView ID="gdvDados" runat="server">
         <HeaderStyle CssClass="text-muted text-small d-lg-none" />
@@ -111,75 +60,6 @@
     </asp:GridView>
     <asp:SqlDataSource ID="sdsDados" runat="server"></asp:SqlDataSource>
     <!-- Discount List End -->
-
-    <!-- Discount Detail Modal Start -->
-    <div class="modal modal-right fade" id="discountDetailModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Discount Detail</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label class="form-label">Code</label>
-                        <input type="text" class="form-control" value="SUMMERSALE" />
-                    </div>
-                    <div class="mb-3 w-100">
-                        <label class="form-label">Type</label>
-                        <select class="select-single-no-search">
-                            <option label="&nbsp;"></option>
-                            <option value="Fixed Amount">Fixed Amount</option>
-                            <option value="Free Shipping">Free Shipping</option>
-                            <option value="Percentage" selected>Percentage</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Start</label>
-                        <input type="text" class="form-control date-picker-close" value="06/01/2020" />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">End</label>
-                        <input type="text" class="form-control date-picker-close" value="07/01/2020" />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Limit</label>
-                        <input type="text" class="form-control" value="5000" />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Usage</label>
-                        <input type="text" class="form-control" value="2723" readonly />
-                    </div>
-                    <div class="mb-3 w-100">
-                        <label class="form-label">Status</label>
-                        <select class="select-single-no-search">
-                            <option label="&nbsp;"></option>
-                            <option value="Active" selected>Active</option>
-                            <option value="Inactive">Inactive</option>
-                            <option value="Expired">Expired</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer border-0">
-                    <a
-                        href="#"
-                        class="btn btn-icon btn-icon-only btn-outline-primary"
-                        data-delay='{"show":"500", "hide":"0"}'
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Delete"
-                        data-bs-dismiss="modal">
-                        <i data-acorn-icon="bin"></i>
-                    </a>
-                    <a href="#" class="btn btn-icon btn-icon-end btn-primary" data-bs-dismiss="modal">
-                        <span>Save</span>
-                        <i data-acorn-icon="save"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Discount Detail Modal End -->
 
     <!-- Discount Add Modal Start -->
     <div class="modal modal-right fade" id="discountAddModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -266,7 +146,7 @@
                 <div class="modal-footer border-0">
                     <asp:Label ID="lblMensagem" runat="server" Text=""></asp:Label>
                     <br />
-                    <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server"> 
+                    <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click"> 
                         <span>Adicionar</span>
                         <i data-acorn-icon="send"></i>
                     </asp:LinkButton>        

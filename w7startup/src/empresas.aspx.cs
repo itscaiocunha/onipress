@@ -21,7 +21,7 @@ namespace global
     {
         public static void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace global
 
                 db.AddInParameter(command, "@nome", DbType.String, txtNomeCliente.Text);
                 db.AddInParameter(command, "@razao", DbType.String, txtRazaoSocial.Text);
-                db.AddInParameter(command, "@cpf", DbType.String, txtCPFCNPJ.Text);  
+                db.AddInParameter(command, "@cpf", DbType.String, txtCPFCNPJ.Text);
                 db.AddInParameter(command, "@celular", DbType.String, txtCelular.Text);
                 db.AddInParameter(command, "@email", DbType.String, txtEmail.Text);
                 db.AddInParameter(command, "@cep", DbType.String, txtCEP.Text);
@@ -59,6 +59,8 @@ namespace global
                 lblMensagem.Text = "Erro ao adicionar: " + ex.Message;
             }
         }
+
+        
 
         private void LimparCampos()
         {
