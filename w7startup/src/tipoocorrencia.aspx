@@ -1,4 +1,4 @@
-﻿<%@ Page Async="true" Title="" Language="C#" MasterPageFile="~/src/principal.Master" AutoEventWireup="true" CodeBehind="tipoocorrencia.aspx.cs" Inherits="global.tipopessoas" %>
+﻿<%@ Page Async="true" Title="" Language="C#" MasterPageFile="~/src/principal.Master" AutoEventWireup="true" CodeBehind="tipoocorrencia.aspx.cs" Inherits="global.tipoocorrencia" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Title and Top Buttons Start -->
@@ -84,6 +84,8 @@
                     </div>
                 </div>
                 <div class="modal-footer border-0">
+                    <asp:Label ID="lblMensagem" runat="server" Text=""></asp:Label>
+                    <br />
                     <asp:LinkButton ID="btnSalvar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnSalvar_Click"><span>Adicionar</span>
                         <i data-acorn-icon="send"></i>
                     </asp:LinkButton>

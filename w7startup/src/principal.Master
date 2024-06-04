@@ -227,12 +227,12 @@
                                     <span class="label">Dashboard</span>
                                 </a>
                             </li>
-                            <li>
+                            <<%--li>
                                 <a href="controle_acesso.aspx">
                                     <i data-acorn-icon="key" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Controle de Acesso</span>
                                 </a>
-                            </li>
+                            </li>--%>
                             <li>
                                 <a href="planos.aspx">
                                     <i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>
@@ -263,12 +263,12 @@
                                     <span class="label">Dispositivos</span>
                                 </a>
                             </li>
-                            <li>
+                            <%--<li>
                                 <a href="bloco_dispositivo.aspx">
                                     <i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Bloco/Dispositivo</span>
                                 </a>
-                            </li>
+                            </li>--%>
                             <li>
                                 <a href="tipopessoas.aspx">
                                     <i data-acorn-icon="user" class="icon" data-acorn-size="18"></i>
@@ -281,12 +281,12 @@
                                     <span class="label">Pessoas</span>
                                 </a>
                             </li>
-                            <li>
+                           <%-- <li>
                                 <a href="ocorrencias.aspx">
                                     <i data-acorn-icon="key" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Ocorrências</span>
                                 </a>
-                            </li>
+                            </li>--%>
                             <li>
                                 <a href="tipoocorrencia.aspx">
                                     <i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>

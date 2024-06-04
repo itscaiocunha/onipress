@@ -29,7 +29,7 @@ namespace global
             Database db = DatabaseFactory.CreateDatabase("ConnectionString");
 
             DbCommand command = db.GetSqlStringCommand(
-                "INSERT INTO OniPres_dispositivos (nome, empresa, unidade, bloco, [status]) " +
+                "INSERT INTO OniPres_dispostivo (nome, empresa, unidade, bloco, [status]) " +
                 "VALUES (@nome, @empresa, @unidade, @bloco, @status)");
 
             db.AddInParameter(command, "@nome", DbType.String, txtNome.Text);
