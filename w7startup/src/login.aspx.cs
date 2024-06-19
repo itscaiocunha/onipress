@@ -1,4 +1,5 @@
 ﻿using Microsoft.Practices.EnterpriseLibrary.Data;
+using Microsoft.Practices.EnterpriseLibrary.Common;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 using pix_dynamic_payload_generator.net;
 using pix_dynamic_payload_generator.net.Requests.RequestServices;
 using System.Runtime.InteropServices;
+using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 
 namespace global
 {
@@ -25,7 +27,19 @@ namespace global
 
         protected void btnEntrar_Click(object sender, EventArgs e)
         {
+
             Response.Redirect("dashboard.aspx", true);
+
+            string cript = Criptografia.Encrypt(txtSenha.Text).Replace("+", "=");
+
+            using (IDataReader reader1 = DatabaseFactory.CreateDatabase("ConnectionString").ExecuteReader(CommandType.Text,
+                    "select * from OniPres_usuario where status = 'ATIVO' and email = '" + txtEmail + "'"))
+            {
+                if (reader1.Read())
+                {
+                    Response.Redirect("dashboard.aspx", true);
+                }
+            }
         }
     }
 }

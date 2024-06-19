@@ -9,7 +9,7 @@
                 <a class="muted-link pb-2 d-inline-block hidden" href="#">
                     <span class="align-middle lh-1 text-small">&nbsp;</span>
                 </a>
-                <h1 class="mb-0 pb-0 display-4" id="title">Bem-vindo, Eduardo Marques!</h1>
+                <h1 class="mb-0 pb-0 display-4" id="title">Bem-vindo!</h1>
             </div>
             <!-- Title End -->
         </div>
@@ -44,7 +44,9 @@
                                     <i data-acorn-icon="dollar" class="text-primary"></i>
                                 </div>
                                 <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">Mensalidades</div>
-                                <div class="text-primary cta-4">R$ 315.20</div>
+                                <div class="text-primary cta-4">
+                                    <asp:Label ID="lblMensalidades" runat="server" Text=""></asp:Label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -55,7 +57,9 @@
                                     <i data-acorn-icon="shop" class="text-primary"></i>
                                 </div>
                                 <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">Empresas</div>
-                                <div class="text-primary cta-4">16</div>
+                                <div class="text-primary cta-4">
+                                    <asp:Label ID="lblEmpresas" runat="server" Text=""></asp:Label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -66,7 +70,9 @@
                                     <i data-acorn-icon="server" class="text-primary"></i>
                                 </div>
                                 <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">Acessos</div>
-                                <div class="text-primary cta-4">463</div>
+                                <div class="text-primary cta-4">
+                                    <asp:Label ID="lblAcessos" runat="server" Text=""></asp:Label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -77,7 +83,9 @@
                                     <i data-acorn-icon="user" class="text-primary"></i>
                                 </div>
                                 <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">Visitantes</div>
-                                <div class="text-primary cta-4">17</div>
+                                <div class="text-primary cta-4">
+                                    <asp:Label ID="lblVisitantes" runat="server" Text=""></asp:Label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,7 +96,9 @@
                                     <i data-acorn-icon="arrow-top-left" class="text-primary"></i>
                                 </div>
                                 <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">Dispositivos</div>
-                                <div class="text-primary cta-4">2</div>
+                                <div class="text-primary cta-4">
+                                    <asp:Label ID="lblDispositivos" runat="server" Text=""></asp:Label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -99,7 +109,9 @@
                                     <i data-acorn-icon="message" class="text-primary"></i>
                                 </div>
                                 <div class="mb-1 d-flex align-items-center text-alternate text-small lh-1-25">Suportes</div>
-                                <div class="text-primary cta-4">5</div>
+                                <div class="text-primary cta-4">
+                                    <asp:Label ID="lblSuportes" runat="server" Text=""></asp:Label>
+                                </div>
                             </div>
                         </div>
                     </div>

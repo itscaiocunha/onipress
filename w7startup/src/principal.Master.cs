@@ -11,7 +11,7 @@ namespace global
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //lblNomeUsuario.Text = Session["nomeusuario"].ToString();
         }
     }
 }

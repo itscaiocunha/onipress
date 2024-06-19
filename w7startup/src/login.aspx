@@ -17,6 +17,8 @@
         <div class="mb-3" style="text-align:right">
             <asp:LinkButton ID="lkbEsqueceuSenha" CssClass="" runat="server">Esqueceu a senha?</asp:LinkButton>
         </div>
+        <asp:Label ID="lblMensagem" runat="server" Text=""></asp:Label>
+        <br />
         <asp:LinkButton ID="btnEntrar" CssClass="btn btn-icon btn-icon-end btn-primary" runat="server" OnClick="btnEntrar_Click">
             <span>Entrar</span>
             <i data-acorn-icon="send"></i>
