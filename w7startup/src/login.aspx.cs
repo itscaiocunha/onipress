@@ -1,4 +1,4 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Data;
+﻿
 using Microsoft.Practices.EnterpriseLibrary.Common;
 using RestSharp;
 using System;
@@ -15,6 +15,7 @@ using pix_dynamic_payload_generator.net;
 using pix_dynamic_payload_generator.net.Requests.RequestServices;
 using System.Runtime.InteropServices;
 using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
+using Microsoft.Practices.EnterpriseLibrary.Data;
 
 namespace global
 {
