@@ -229,7 +229,7 @@
                                     <span class="label">Dashboard</span>
                                 </a>
                             </li>
-                            <<%--li>
+<%--                            <li>
                                 <a href="controle_acesso.aspx">
                                     <i data-acorn-icon="key" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Controle de Acesso</span>
@@ -295,7 +295,7 @@
                                     <span class="label">Tipo de Ocorrência</span>
                                 </a>
                             </li>
-                            <li>
+<%--                            <li>
                                 <a href="suporte.aspx">
                                     <i data-acorn-icon="help" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Suporte</span>
@@ -306,7 +306,7 @@
                                     <i data-acorn-icon="help" class="icon" data-acorn-size="18"></i>
                                     <span class="label">FAQ</span>
                                 </a>
-                            </li>
+                            </li>--%>
                             <li>
                                 <a href="login.aspx">
                                     <i data-acorn-icon="logout" class="icon" data-acorn-size="18"></i>

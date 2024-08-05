@@ -40,7 +40,7 @@ namespace global
                 "VALUES (@nome, @tipo, @cpf, @celular, @email, @empresa, @unidade, @bloco, @dispositivo, @status)");
 
             db.AddInParameter(command, "@nome", DbType.String, txtNomeCliente.Text);
-            db.AddInParameter(command, "@tipo", DbType.String, txtTipo.Text);
+            db.AddInParameter(command, "@tipo", DbType.String, ddlTipo.SelectedValue);
             db.AddInParameter(command, "@cpf", DbType.String, txtCPFCNPJ.Text);
             db.AddInParameter(command, "@celular", DbType.String, txtCelular.Text);
             db.AddInParameter(command, "@email", DbType.String, txtEmail.Text);
@@ -56,12 +56,12 @@ namespace global
 
                 lblMensagem.Text = "Adicionado com sucesso!";
 
-                string mensagem = "Morador";
+                //string mensagem = "Morador";
 
-                if (txtTipo.Text == mensagem)
-                {
+                //if (txtTipo.Text == mensagem)
+                //{
                     //enviarMensagemMorador();
-                }
+                //}
 
                 LimparCampos();
             }
@@ -90,7 +90,6 @@ namespace global
         private void LimparCampos()
         {
             txtNomeCliente.Text = string.Empty;
-            txtTipo.Text = string.Empty;
             txtCPFCNPJ.Text = string.Empty;
             txtCelular.Text = string.Empty;
             txtEmail.Text = string.Empty;
@@ -99,6 +98,12 @@ namespace global
             txtBloco.Text = string.Empty;
             txtDispositivo.Text = string.Empty;
             ddlStatus.SelectedIndex = 0;
+        }
+
+        protected void lkbFiltro_Click(object sender, EventArgs e)
+        {
+            sdsDados.SelectCommand = "select p.nome, p.cpf, p.celular, p.email, p.empresa, p.unidade, p.bloco, p.dispositivo, t.nome as tipo from OniPres_pessoa p join OniPres_tipoPessoa t on t.id = p.tipo_acesso where p.nome like '%" + txtBuscar.Text + "%'";
+            gdvDados.DataBind();
         }
     }
 }

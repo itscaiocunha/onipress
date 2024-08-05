@@ -40,6 +40,7 @@ namespace global
                 db.ExecuteNonQuery(command);
 
                 lblMensagem.Text = "Adicionado com sucesso!";
+                txtNome.Text = "";
             }
             catch (Exception ex)
             {
@@ -59,6 +60,12 @@ namespace global
                     lblMensagem.Text = "";
                 }
             }
+        }
+
+        protected void lkbFiltro_Click(object sender, EventArgs e)
+        {
+            sdsDados.SelectCommand = "select nome, status from OniPres_tipoPessoa where nome like '%" + txtBuscar.Text + "%'";
+            gdvDados.DataBind();
         }
     }
 }

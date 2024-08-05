@@ -46,17 +46,48 @@
                 </span>
             </div>
         </div>
+        <div class="col-sm-12 col-md-3 col-lg-2 col-xxl-2 mb-1">
+            <asp:LinkButton ID="filtroClick" runat="server"
+                CssClass="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto" OnClick="lkbFiltro_Click">
+                <i data-acorn-icon="search"></i> Atualizar
+            </asp:LinkButton>
+        </div>
     </div>
 
     <%-- Grid --%>
-    <asp:GridView ID="gdvDados" runat="server">
-        <HeaderStyle CssClass="text-muted text-small d-lg-none" />
-        <RowStyle CssClass="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative" />
-        <Columns>
-           
-        </Columns>
-    </asp:GridView>
-    <asp:SqlDataSource ID="sdsDados" runat="server"></asp:SqlDataSource>
+    <div class="row">
+    <div class="col-12 mb-5">
+        <asp:Label ID="lblDados" runat="server"></asp:Label>
+        <asp:GridView ID="gdvDados" Width="100%" runat="server" CellPadding="4" EmptyDataText="Não há dados para visualizar" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataSourceID="sdsDados">
+          <AlternatingRowStyle />
+          <Columns>
+              <asp:BoundField DataField="nome_fantasia" HeaderText="Nome Fantasia" SortExpression="nome_fantasia" />
+              <asp:BoundField DataField="razao_social" HeaderText="Razão Social" SortExpression="razao_social" />                      
+              <asp:BoundField DataField="cpf_cnpj" HeaderText="CPF/CNPJ" SortExpression="cpf_cnpj" />
+              <asp:BoundField DataField="celular" HeaderText="Celular" SortExpression="celular" />
+              <asp:BoundField DataField="email" HeaderText="E-mail" SortExpression="email" />
+              <asp:BoundField DataField="CEP" HeaderText="CEP" SortExpression="CEP" />
+              <asp:BoundField DataField="endereco" HeaderText="Endereço" SortExpression="endereco" />
+              <asp:BoundField DataField="bairro" HeaderText="Bairro" SortExpression="bairro" />
+              <asp:BoundField DataField="estado" HeaderText="Estado" SortExpression="estado" />
+              <asp:BoundField DataField="cidade" HeaderText="Cidade" SortExpression="cidade" />
+          </Columns>
+          <EditRowStyle BackColor="#7C6F57" />
+          <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+          <HeaderStyle />
+          <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+          <RowStyle Height="4em" BackColor="White" ForeColor="#a59e9e" CssClass="fix-margin" />
+          <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+          <SortedAscendingCellStyle BackColor="#F8FAFA" />
+          <SortedAscendingHeaderStyle BackColor="#246B61" />
+          <SortedDescendingCellStyle BackColor="#D4DFE1" />
+          <SortedDescendingHeaderStyle BackColor="#15524A" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="sdsDados" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand=
+             "select nome_fantasia, razao_social, cpf_cnpj, celular, email, CEP, endereco, bairro, estado, cidade from OniPres_empresa where [status] = 'Ativo'">
+        </asp:SqlDataSource>
+    </div>
+  </div>
 
     <!-- Modal -->
     <div class="modal modal-right fade" id="discountAddModal" tabindex="-1" role="dialog" aria-hidden="true">

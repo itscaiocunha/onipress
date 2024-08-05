@@ -22,7 +22,7 @@ namespace global
     {
         public static void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
@@ -34,8 +34,8 @@ namespace global
                 "VALUES (@nome, @empresa, @unidade, @status)");
 
             db.AddInParameter(command, "@nome", DbType.String, txtNomeCliente.Text);
-            db.AddInParameter(command, "@empresa", DbType.String, txtEmpresa.Text);
-            db.AddInParameter(command, "@unidade", DbType.String, txtUnidade.Text);
+            db.AddInParameter(command, "@empresa", DbType.String, ddlEmpresas.SelectedValue);
+            db.AddInParameter(command, "@unidade", DbType.String, ddlUnidades.SelectedValue);
             db.AddInParameter(command, "@status", DbType.String, ddlStatus.SelectedValue);
 
             try
@@ -55,9 +55,15 @@ namespace global
         private void LimparCampos()
         {
             txtNomeCliente.Text = string.Empty;
-            txtEmpresa.Text = string.Empty;
-            txtUnidade.Text = string.Empty;
+            ddlEmpresas.SelectedIndex = 0;
+            ddlUnidades.SelectedIndex = 0;
             ddlStatus.SelectedIndex = 0;
+        }
+
+        protected void lkbFiltro_Click(object sender, EventArgs e)
+        {
+            sdsDados.SelectCommand = "select nome, empresa, unidade from OniPres_bloco where status = 'Ativo' and nome like '%" + txtBuscar.Text + "%'";
+            gdvDados.DataBind();
         }
     }
 }

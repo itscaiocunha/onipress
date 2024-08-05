@@ -24,6 +24,24 @@ namespace global
         protected global::System.Web.UI.WebControls.TextBox txtBuscar;
 
         /// <summary>
+        /// Controle filtroClick.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton filtroClick;
+
+        /// <summary>
+        /// Controle lblDados.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDados;
+
+        /// <summary>
         /// Controle gdvDados.
         /// </summary>
         /// <remarks>
@@ -51,22 +69,40 @@ namespace global
         protected global::System.Web.UI.WebControls.TextBox txtNomeCliente;
 
         /// <summary>
-        /// Controle txtEmpresa.
+        /// Controle ddlEmpresas.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmpresa;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEmpresas;
 
         /// <summary>
-        /// Controle txtUnidade.
+        /// Controle sdsEmpresas.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUnidade;
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsEmpresas;
+
+        /// <summary>
+        /// Controle ddlUnidades.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlUnidades;
+
+        /// <summary>
+        /// Controle sdsUnidades.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsUnidades;
 
         /// <summary>
         /// Controle ddlStatus.

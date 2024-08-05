@@ -48,21 +48,52 @@
                     <i data-acorn-icon="close"></i>
                 </span>
             </div>
+            <div class="col-sm-12 col-md-3 col-lg-2 col-xxl-2 mb-1">
+                <asp:LinkButton ID="filtroClick" runat="server"
+                    CssClass="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto" OnClick="lkbFiltro_Click">
+                    <i data-acorn-icon="search"></i> Atualizar
+                </asp:LinkButton>
+            </div>
         </div>
     </div>
 
-    <asp:GridView ID="gdvDados" runat="server">
-        <HeaderStyle CssClass="text-muted text-small d-lg-none" />
-        <RowStyle CssClass="col-11 col-lg-2 d-flex flex-column justify-content-center mb-2 mb-lg-0 order-1 order-lg-1 h-lg-100 position-relative" />
-        <Columns>
-           
-        </Columns>
-    </asp:GridView>
-    <asp:SqlDataSource ID="sdsDados" runat="server"></asp:SqlDataSource>
+    <div class="row">
+        <div class="col-12 mb-5">
+            <asp:Label ID="lblDados" runat="server"></asp:Label>
+            <asp:GridView ID="gdvDados" Width="100%" runat="server" CellPadding="4" EmptyDataText="Não há dados para visualizar" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataSourceID="sdsDados">
+              <AlternatingRowStyle />
+              <Columns>
+                  <asp:BoundField DataField="nome" HeaderText="Nome" SortExpression="nome" />
+                  <asp:BoundField DataField="cpf" HeaderText="CPF" SortExpression="cpf" />                      
+                  <asp:BoundField DataField="email" HeaderText="E-mail" SortExpression="email" />                     
+                  <asp:BoundField DataField="empresa" HeaderText="Empresa" SortExpression="empresa" />
+                  <asp:BoundField DataField="unidade" HeaderText="Unidade" SortExpression="unidade" />
+                  <asp:BoundField DataField="bloco" HeaderText="Bloco" SortExpression="bloco" />
+                  <asp:BoundField DataField="dispositivo" HeaderText="Dispositivo" SortExpression="dispositivo" />
+                  <asp:BoundField DataField="tipo" HeaderText="Tipo de Pessoa" SortExpression="tipo" />
+              </Columns>
+              <EditRowStyle BackColor="#7C6F57" />
+              <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+              <HeaderStyle />
+              <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+              <RowStyle Height="4em" BackColor="White" ForeColor="#a59e9e" CssClass="fix-margin" />
+              <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+              <SortedAscendingCellStyle BackColor="#F8FAFA" />
+              <SortedAscendingHeaderStyle BackColor="#246B61" />
+              <SortedDescendingCellStyle BackColor="#D4DFE1" />
+              <SortedDescendingHeaderStyle BackColor="#15524A" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="sdsDados" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand=
+                 "select p.nome, p.cpf, p.celular, p.email, p.empresa, p.unidade, p.bloco, p.dispositivo, t.nome as tipo from OniPres_pessoa p
+                join OniPres_tipoPessoa t on t.id = p.tipo_acesso">
+            </asp:SqlDataSource>
+        </div>
+      </div>
+
     <!-- Discount List End -->
 
     <!-- Discount Add Modal Start -->
-    <div class="modal modal-right fade" id="discountAddModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <asp:Panel ID="pnlModal" runat="server" CssClass="modal-right" Visible="false">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -76,9 +107,12 @@
                         <asp:TextBox ID="txtNomeCliente" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>       
                     <div class="mb-3">
-                        <label class="form-label">Tipo de Acesso</label>
-                        <asp:TextBox ID="txtTipo" runat="server" CssClass="form-control"></asp:TextBox>
+                        <label class="form-label">Tipo de Pessoas</label>
+                        <asp:DropDownList ID="ddlTipo" runat="server" CssClass="form-control shadow dropdown-menu-end" DataSourceID="sdsTipo" DataTextField="nome" DataValueField="id"></asp:DropDownList>
+                        <asp:SqlDataSource ID="sdsTipo" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand=
+                            "select id, nome from OniPres_tipoPessoa"></asp:SqlDataSource>
                     </div>
+
                     <div class="mb-3">
                         <label class="form-label">CPF</label>
                         <asp:TextBox ID="txtCPFCNPJ" runat="server" CssClass="form-control"></asp:TextBox>
@@ -128,5 +162,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </asp:Panel>
 </asp:Content>

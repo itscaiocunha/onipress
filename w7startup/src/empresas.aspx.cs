@@ -78,5 +78,11 @@ namespace global
             txtCidade.Text = string.Empty;
             ddlStatus.SelectedIndex = 0;
         }
+
+        protected void lkbFiltro_Click(object sender, EventArgs e)
+        {
+            sdsDados.SelectCommand = "select nome_fantasia, razao_social, cpf_cnpj, celular, email, CEP, endereco, bairro, estado, cidade from OniPres_empresa where [status] = 'Ativo' and nome_fantasia like '%" + txtBuscar.Text + "%'";
+            gdvDados.DataBind();
+        }
     }
 }
