@@ -181,12 +181,12 @@
                                     <span class="label">Pessoas</span>
                                 </a>
                             </li>
-                           <%-- <li>
+                            <li>
                                 <a href="ocorrencias.aspx">
                                     <i data-acorn-icon="key" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Ocorrências</span>
                                 </a>
-                            </li>--%>
+                            </li>
                             <li>
                                 <a href="tipoocorrencia.aspx">
                                     <i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>
