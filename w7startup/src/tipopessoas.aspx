@@ -1,6 +1,9 @@
 ﻿<%@ Page Async="true" Title="" Language="C#" MasterPageFile="~/src/principal.Master" AutoEventWireup="true" CodeBehind="tipopessoas.aspx.cs" Inherits="global.tipopessoas" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:HiddenField ID="hdfId" runat="server" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <!-- Title and Top Buttons Start -->
     <div class="page-title-container">
         <div class="row g-0">
@@ -10,26 +13,28 @@
                         <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                         <span class="text-small align-middle">Administrador</span>
                     </a>
-                    <h1 class="mb-0 pb-0 display-4" id="title">Tipo Pessoas</h1>
+                    <h1 class="mb-0 pb-0 display-4" id="title">Tipo de Acesso</h1>
+                    <asp:Label ID="lblResposta" runat="server" Text=""></asp:Label>
                 </div>
             </div>
 
             <%-- Botão --%>
             <div class="w-100 d-md-none"></div>
-            <div class="col-12 col-sm-6 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
-                <button
-                    type="button"
-                    class="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto"
-                    data-bs-toggle="modal"
-                    data-bs-target="#discountAddModal">
-                    <i data-acorn-icon="plus"></i>
-                    <span>Criar Tipo</span>
-                </button>
-                <div class="dropdown d-inline-block d-xl-none">
+                <div class="col-12 col-sm-6 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
+                    <button
+                        type="button"
+                        class="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto"
+                        data-bs-toggle="modal"
+                        data-bs-target='<%= "#" + pnlModal.ClientID %>'>
+                        <i data-acorn-icon="plus"></i>
+                        <span>Criar Acesso</span>
+                    </button>
+                    <div class="dropdown d-inline-block d-xl-none">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
 
 
     <%-- Filtros --%>
@@ -54,42 +59,57 @@
         </div>
     </div>
 
-    <%-- Grid --%>
-    <div class="row">
-        <div class="col-12 mb-5">
-            <asp:Label ID="lblDados" runat="server"></asp:Label>
-            <asp:GridView ID="gdvDados" Width="100%" runat="server" CellPadding="4" EmptyDataText="Não há dados para visualizar" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataSourceID="sdsDados">
-              <AlternatingRowStyle />
-              <Columns>
-                  <asp:BoundField DataField="nome" HeaderText="Nome" SortExpression="nome" />
-                  <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />                      
-              </Columns>
-              <EditRowStyle BackColor="#7C6F57" />
-              <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-              <HeaderStyle />
-              <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-              <RowStyle Height="4em" BackColor="White" ForeColor="#a59e9e" CssClass="fix-margin" />
-              <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-              <SortedAscendingCellStyle BackColor="#F8FAFA" />
-              <SortedAscendingHeaderStyle BackColor="#246B61" />
-              <SortedDescendingCellStyle BackColor="#D4DFE1" />
-              <SortedDescendingHeaderStyle BackColor="#15524A" />
-            </asp:GridView>
-            <asp:SqlDataSource ID="sdsDados" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand=
-                 "select id, nome, status from OniPres_tipoPessoa">
-            </asp:SqlDataSource>
-        </div>
-    </div>
+        <asp:GridView ID="gdvDados" Width="100%" runat="server" CellPadding="4" EmptyDataText="Não há dados para visualizar" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataSourceID="sdsDados" OnRowCommand="gdvDados_RowCommand">
+        <AlternatingRowStyle />
+        <Columns>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:LinkButton 
+                        runat="server" 
+                        CommandArgument='<%# Eval("id") %>' 
+                        CommandName="Excluir" 
+                        ID="excluirRegistro" 
+                        CssClass="btn btn-icon btn-icon-start btn-danger">
+                        EXCLUIR
+                    </asp:LinkButton>
+
+                    <asp:LinkButton 
+                        runat="server" 
+                        CommandArgument='<%# Eval("id") %>' 
+                        CommandName="Editar" 
+                        ID="editarRegistro" 
+                        CssClass="btn btn-icon btn-icon-start btn-primary">
+                        EDITAR
+                    </asp:LinkButton>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="nome" HeaderText="Nome" SortExpression="nome" />
+            <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />
+        </Columns>
+        <EditRowStyle BackColor="#7C6F57" />
+        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle />
+        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle Height="4em" BackColor="White" ForeColor="#a59e9e" CssClass="fix-margin" />
+        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+        <SortedAscendingCellStyle BackColor="#F8FAFA" />
+        <SortedAscendingHeaderStyle BackColor="#246B61" />
+        <SortedDescendingCellStyle BackColor="#D4DFE1" />
+        <SortedDescendingHeaderStyle BackColor="#15524A" />
+    </asp:GridView>
+    <asp:SqlDataSource ID="sdsDados" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="select id, nome, status from OniPres_tipoPessoa where [status] = 'Ativo'">
+    </asp:SqlDataSource>
+
 
     <!-- Modal -->
-    <div class="modal modal-right fade" id="discountAddModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <asp:Panel ID="pnlModal" runat="server" CssClass="modal modal-right fade" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Adicionar Tipo</h5>
+                    <h5 class="modal-title">Adicionar Empresas</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Nome</label>
                         <asp:TextBox ID="txtNome" runat="server" CssClass="form-control" Required></asp:TextBox>
@@ -109,5 +129,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </asp:Panel>
 </asp:Content>
