@@ -93,7 +93,7 @@ namespace global
 
         protected void lkbFiltro_Click(object sender, EventArgs e)
         {
-            sdsDados.SelectCommand = "select d.id, d.nome, e.nome_fantasia as empresa, u.nome as unidade, b.nome as bloco from OniPres_dispostivo d join OniPres_empresa e on e.id = d.empresa join OniPres_unidade u on u.id = d.unidade join OniPres_bloco b on b.id = d.bloco where d.[status] = 'Ativo' and nome like '%" + txtBuscar.Text + "%'";
+            sdsDados.SelectCommand = "select d.id, d.nome, e.nome_fantasia as empresa, u.nome as unidade, b.nome as bloco from OniPres_dispostivo d join OniPres_empresa e on e.id = d.empresa join OniPres_unidade u on u.id = d.unidade join OniPres_bloco b on b.id = d.bloco where d.[status] = 'Ativo' and d.nome like '%" + txtBuscar.Text + "%'";
             BindData();
         }
 

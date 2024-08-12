@@ -51,7 +51,7 @@ namespace global
                 else
                 {
                     // Adicionar novo registro
-                    string insertQuery = "INSERT INTO OniPres_planos (nome, [status]) VALUES (@nome, @status)";
+                    string insertQuery = "INSERT INTO OniPres_tipoPessoa (nome, [status]) VALUES (@nome, @status)";
                     DbCommand insertCommand = db.GetSqlStringCommand(insertQuery);
 
                     db.AddInParameter(insertCommand, "@nome", DbType.String, txtNome.Text);
@@ -84,7 +84,7 @@ namespace global
 
         protected void lkbFiltro_Click(object sender, EventArgs e)
         {
-            sdsDados.SelectCommand = "select nome, status from OniPres_tipoPessoa where [status] = 'Ativo' and nome like '%" + txtBuscar.Text + "%'";
+            sdsDados.SelectCommand = "select id, nome, status from OniPres_tipoPessoa where [status] = 'Ativo' and nome like '%" + txtBuscar.Text + "%'";
             BindData();
         }
 

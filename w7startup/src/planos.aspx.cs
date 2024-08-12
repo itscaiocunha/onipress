@@ -90,7 +90,7 @@ namespace global
 
         protected void lkbFiltro_Click(object sender, EventArgs e)
         {
-            sdsDados.SelectCommand = "select nome, valor, descricao from OniPres_planos where [status] = 'Ativo' and nome like '%" + txtBuscar.Text + "%'";
+            sdsDados.SelectCommand = "select id, nome, valor, descricao from OniPres_planos where [status] = 'Ativo' and nome like '%" + txtBuscar.Text + "%'";
             BindData();
         }
 

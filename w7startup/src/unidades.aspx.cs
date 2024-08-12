@@ -110,10 +110,7 @@ namespace global
                 sdsDados.SelectCommand = "SELECT u.id, u.nome AS nome, e.nome_fantasia AS empresa, u.endereco AS endereco, u.cidade AS cidade, u.estado AS estado " +
                                           "FROM OniPres_unidade u " +
                                           "JOIN OniPres_empresa e ON u.empresa = e.id " +
-                                          "WHERE u.[status] = 'Ativo' AND u.nome LIKE @nome";
-
-                sdsDados.SelectParameters.Clear();
-                sdsDados.SelectParameters.Add("nome", "'%" + txtBuscar.Text.Trim() + "%'");
+                                          "WHERE u.[status] = 'Ativo' AND u.nome LIKE '%" + txtBuscar.Text + "%'";
 
                 BindData();
             }
