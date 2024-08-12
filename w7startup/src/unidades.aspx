@@ -13,7 +13,7 @@
                         <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
                         <span class="text-small align-middle">Administrador</span>
                     </a>
-                    <h1 class="mb-0 pb-0 display-4" id="title">Planos</h1>
+                    <h1 class="mb-0 pb-0 display-4" id="title">Unidades</h1>
                     <asp:Label ID="lblResposta" runat="server" Text=""></asp:Label>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         data-bs-toggle="modal"
                         data-bs-target='<%= "#" + pnlModal.ClientID %>'>
                         <i data-acorn-icon="plus"></i>
-                        <span>Criar Plano</span>
+                        <span>Criar Unidade</span>
                     </button>
                     <div class="dropdown d-inline-block d-xl-none">
                     </div>
