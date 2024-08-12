@@ -10,7 +10,10 @@ using RestSharp;
 namespace global
 {
     public class auth
-    {       
-        
+    {
+        internal static string RandomNumero(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

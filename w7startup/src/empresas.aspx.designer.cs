@@ -11,8 +11,26 @@ namespace global
 {
 
 
-    public partial class empresas
+    public partial class empresa
     {
+
+        /// <summary>
+        /// Controle hdfId.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdfId;
+
+        /// <summary>
+        /// Controle lblResposta.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResposta;
 
         /// <summary>
         /// Controle txtBuscar.
@@ -33,15 +51,6 @@ namespace global
         protected global::System.Web.UI.WebControls.LinkButton filtroClick;
 
         /// <summary>
-        /// Controle lblDados.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDados;
-
-        /// <summary>
         /// Controle gdvDados.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace global
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource sdsDados;
+
+        /// <summary>
+        /// Controle pnlModal.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlModal;
 
         /// <summary>
         /// Controle txtNomeCliente.

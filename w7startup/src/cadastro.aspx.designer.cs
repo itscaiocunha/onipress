@@ -11,70 +11,61 @@ namespace global
 {
 
 
-    public partial class dashboard
+    public partial class cadastro
     {
 
         /// <summary>
-        /// Controle hdfId.
+        /// Controle txtNome.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdfId;
+        protected global::System.Web.UI.WebControls.TextBox txtNome;
 
         /// <summary>
-        /// Controle hdfIdUsuario.
+        /// Controle txtEmail.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdfIdUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// Controle lblMensalidades.
+        /// Controle txtSenha.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensalidades;
+        protected global::System.Web.UI.WebControls.TextBox txtSenha;
 
         /// <summary>
-        /// Controle lblEmpresas.
+        /// Controle lkbCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmpresas;
+        protected global::System.Web.UI.WebControls.LinkButton lkbCadastro;
 
         /// <summary>
-        /// Controle lblAcessos.
+        /// Controle lblMensagem.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAcessos;
+        protected global::System.Web.UI.WebControls.Label lblMensagem;
 
         /// <summary>
-        /// Controle lblVisitantes.
+        /// Controle btnEntrar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVisitantes;
-
-        /// <summary>
-        /// Controle lblDispositivos.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDispositivos;
+        protected global::System.Web.UI.WebControls.LinkButton btnEntrar;
     }
 }

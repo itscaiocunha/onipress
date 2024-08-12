@@ -48,129 +48,27 @@
     <link rel="stylesheet" href="css/main.css" />
     <script src="./js/base/loader.js"></script>
 </head>
+
 <body>
     <form id="form1" runat="server">
         <div id="root">
             <div id="nav" class="nav-container d-flex">
                 <div class="nav-content d-flex">
-                    <!-- Logo Start -->
+                    <!-- Logo -->
                     <div class="logo position-relative small">
                         <a href="Dashboard.aspx">
-                            <!-- Logo can be added directly -->
                             <img src="img/logo/logo-write.png" alt="logo" />
-
-                            <!-- Or added via css to provide different ones for different color themes -->
-                            <%--<div class="img"></div>--%>
                         </a>
                     </div>
                     <!-- Logo End -->
 
-                    <!-- User Menu Start -->
-                    <div class="user-container d-flex">
-                        <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="name">
-                                <asp:Label ID="lblNomeUsuario" runat="server" Text=""></asp:Label>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end user-menu wide">
-                            <div class="row mb-3 ms-0 me-0">
-                                <div class="col-12 ps-1 mb-2">
-                                    <div class="text-extra-small text-primary">MINHA CONTA</div>
-                                </div>
-                                <div class="col-6 ps-1 pe-1">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">Meus dados</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Preferências</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <%--<div class="col-6 pe-1 ps-1">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">Security</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Billing</a>
-                                        </li>
-                                    </ul>
-                                </div>--%>
-                            </div>
-                            <div class="row mb-1 ms-0 me-0">
-                                <div class="col-12 p-1 mb-2 pt-2">
-                                    <div class="text-extra-small text-primary">Aplicação</div>
-                                </div>
-                                <div class="col-6 ps-1 pe-1">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">Themes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Language</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-6 pe-1 ps-1">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">Devices</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Storage</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row mb-1 ms-0 me-0">
-                                <div class="col-12 p-1 mb-3 pt-3">
-                                    <div class="separator-light"></div>
-                                </div>
-                                <div class="col-6 ps-1 pe-1">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                <i data-acorn-icon="help" class="me-2" data-acorn-size="17"></i>
-                                                <span class="align-middle">Help</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i data-acorn-icon="file-text" class="me-2" data-acorn-size="17"></i>
-                                                <span class="align-middle">Docs</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-6 pe-1 ps-1">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="#">
-                                                <i data-acorn-icon="gear" class="me-2" data-acorn-size="17"></i>
-                                                <span class="align-middle">Configurações</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i data-acorn-icon="logout" class="me-2" data-acorn-size="17"></i>
-                                                <span class="align-middle">Sair</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- User Menu End -->
-
                     <!-- Icons Menu Start -->
                     <ul class="list-unstyled list-inline text-center menu-icons">
-                        <li class="list-inline-item">
+                        <%--<li class="list-inline-item">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#searchPagesModal">
                                 <i data-acorn-icon="search" data-acorn-size="18"></i>
                             </a>
-                        </li>
+                        </li>--%>
                         <li class="list-inline-item">
                             <a href="#" id="pinButton" class="pin-button">
                                 <i data-acorn-icon="lock-on" class="unpin" data-acorn-size="18"></i>
@@ -229,7 +127,7 @@
                                     <span class="label">Dashboard</span>
                                 </a>
                             </li>
-<%--                            <li>
+<%--                        <li>
                                 <a href="controle_acesso.aspx">
                                     <i data-acorn-icon="key" class="icon" data-acorn-size="18"></i>
                                     <span class="label">Controle de Acesso</span>
@@ -317,6 +215,7 @@
                     </div>
                     <!-- Menu End -->
 
+
                     <!-- Mobile Buttons Start -->
                     <div class="mobile-buttons-container">
                         <!-- Menu Button Start -->
@@ -329,6 +228,7 @@
                 </div>
                 <div class="nav-shadow"></div>
             </div>
+
 
             <main>
                 <div class="container">
@@ -363,6 +263,7 @@
             </footer>
             <!-- Layout Footer End -->
         </div>
+
 
         <!-- Theme Settings Modal Start -->
         <div
@@ -649,46 +550,16 @@
         </div>
         <!-- Theme Settings Modal End -->
 
-        <!-- Niches Modal Start -->
-        <div
-            class="modal fade modal-right scroll-out-negative"
-            id="niches"
-            data-bs-backdrop="true"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="niches"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable full" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Niches</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                    </div>
 
-                    <div class="modal-body">
-                        <div class="scroll-track-visible">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Niches Modal End -->
-
-        <!-- Theme Settings & Niches Buttons Start -->
+        <!-- Theme Settings Buttons Start -->
         <div class="settings-buttons-container">
             <button type="button" class="btn settings-button btn-primary p-0" data-bs-toggle="modal" data-bs-target="#settings" id="settingsButton">
                 <span class="d-inline-block no-delay" data-bs-delay="0" data-bs-offset="0,3" data-bs-toggle="tooltip" data-bs-placement="left" title="Layout">
                     <i data-acorn-icon="paint-roller" class="position-relative"></i>
                 </span>
             </button>
-            <button type="button" class="btn settings-button btn-primary p-0" data-bs-toggle="modal" data-bs-target="#niches" id="nichesButton">
-                <span class="d-inline-block no-delay" data-bs-delay="0" data-bs-offset="0,3" data-bs-toggle="tooltip" data-bs-placement="left" title="Novidades">
-                    <i data-acorn-icon="toy" class="position-relative"></i>
-                </span>
-            </button>
         </div>
-        <!-- Theme Settings & Niches Buttons End -->
+
 
         <!-- Search Modal Start -->
         <div class="modal fade modal-under-nav modal-search modal-close-out" id="searchPagesModal" tabindex="-1" role="dialog" aria-hidden="true">

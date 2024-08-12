@@ -84,7 +84,7 @@
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:BoundField DataField="nome" HeaderText="Nome" SortExpression="nome" />
-            <asp:BoundField DataField="valor" HeaderText="Valor" SortExpression="valor" />                      
+            <asp:BoundField DataField="valor" HeaderText="Valor R$" SortExpression="valor" />                      
             <asp:BoundField DataField="descricao" HeaderText="Descrição" SortExpression="descricao" />                     
         </Columns>
         <EditRowStyle BackColor="#7C6F57" />
